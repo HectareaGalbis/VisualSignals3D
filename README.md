@@ -18,4 +18,4 @@ When talking about signals, there are two sides: The emitter and the receiver. T
 
 A signal has a signature. It can receiver a specified number of arguments. That's why we can have several types of emitters and receivers. Here are a list with all the signals that come with this plugin:
 
-![Visual Signals 3D nodes](/images/VisualSignals3DNodes.png)
+![Visual Signals 3D nodes](/images/VisualSignal3DNodes.png)

@@ -7,10 +7,6 @@
 [node name="Clock" type="Node3D"]
 script = ExtResource("1_3i1oy")
 
-[node name="OnTick" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.557378, 0)
-script = ExtResource("2_am3tt")
-
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 billboard = 1
@@ -18,5 +14,8 @@ texture = ExtResource("3_1aqlv")
 
 [node name="Timer" type="Timer" parent="."]
 autostart = true
+
+[node name="OnTick" type="Node3D" parent="."]
+script = ExtResource("2_am3tt")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

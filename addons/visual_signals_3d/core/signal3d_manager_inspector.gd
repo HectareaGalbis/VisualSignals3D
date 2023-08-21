@@ -15,9 +15,10 @@ static func _find_child_receivers(node : Node, root : Node):
 
 
 func _can_handle(object):
-	var is_its_scene = Signal3DUtils.is_this_my_scene(object as Node) # not sure this is needed
-	var has_receivers = !_find_child_receivers(object , object).is_empty()
-	return is_its_scene and has_receivers
+	var node = object as Node
+	return node \
+		and Signal3DUtils.is_this_my_scene(object as Node) \
+		and !_find_child_receivers(object as Node, object as Node).is_empty()
 
 
 func _parse_begin(object):

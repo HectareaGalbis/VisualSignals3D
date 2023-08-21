@@ -7,13 +7,13 @@
 [node name="Printer" type="Node3D"]
 script = ExtResource("1_7ljhs")
 
-[node name="PrintNumber" type="Node3D" parent="."]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.567426, 0)
-script = ExtResource("2_81mgk")
-
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
 billboard = 1
 texture = ExtResource("2_8u66c")
 
-[connection signal="receive_signal" from="PrintNumber" to="." method="_on_signal_receiver_int_receive_signal"]
+[node name="Print" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.460918, 0)
+script = ExtResource("2_81mgk")
+
+[connection signal="receive_signal" from="Print" to="." method="_on_print_receive_signal"]

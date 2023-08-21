@@ -33,7 +33,7 @@ transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.946
 [node name="_SignalManager(not touch)" type="Node" parent="."]
 script = ExtResource("4_87tft")
 signal_dict = {
-"../Clock/OnTick": [&"../EvenIntFilter/IsEven", &"../Printer/PrintNumber"],
+"../Clock/OnTick": [&"../EvenIntFilter/IsEven", &"../Printer/Print"],
 "../EvenIntFilter/OnEven": [&"../ColorCube/ChangeColor"]
 }
 

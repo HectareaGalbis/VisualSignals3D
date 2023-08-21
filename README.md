@@ -99,3 +99,9 @@ With Visual Signals 3D, the receivers are the nodes that are connected to emitte
 Let's instantiate a `Clock` and a `Printer`. You will notice that a new node called `SignalManager` has been created. This node is necessary to handle the connections between emitters and receivers. Also, it is the responsible to draw that connections.
 
 ![Connecting signals 2](/images/ConnectingSignals2.png)
+
+When selecting an object that contains one or more receivers, it will have extra properties at top of the inspector.
+
+![Connecting signals 3](/images/ConnectingSignals3.png)
+
+

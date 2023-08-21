@@ -16,6 +16,7 @@ texture = ExtResource("3_1aqlv")
 autostart = true
 
 [node name="OnTick" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.553751, 0)
 script = ExtResource("2_am3tt")
 
 [connection signal="timeout" from="Timer" to="." method="_on_timer_timeout"]

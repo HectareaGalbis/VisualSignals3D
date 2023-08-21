@@ -2,16 +2,16 @@
 
 importer="texture"
 type="CompressedTexture2D"
-uid="uid://bxtmgit5ongwk"
-path="res://.godot/imported/signal3d_emitter_big.svg-96cd72f12dde96a21312c3b28f802df5.ctex"
+uid="uid://btjqfd5iftq5e"
+path="res://.godot/imported/signal3d_emitter_big.png-6c2e12104e5088f8318157b1623c1cbf.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/visual_signals_3d/icons/signal3d_emitter_big.svg"
-dest_files=["res://.godot/imported/signal3d_emitter_big.svg-96cd72f12dde96a21312c3b28f802df5.ctex"]
+source_file="res://addons/visual_signals_3d/icons/signal3d_emitter_big.png"
+dest_files=["res://.godot/imported/signal3d_emitter_big.png-6c2e12104e5088f8318157b1623c1cbf.ctex"]
 
 [params]
 
@@ -32,6 +32,3 @@ process/hdr_as_srgb=false
 process/hdr_clamp_exposure=false
 process/size_limit=0
 detect_3d/compress_to=1
-svg/scale=1.0
-editor/scale_with_editor_scale=false
-editor/convert_colors_with_editor_theme=false

@@ -6,6 +6,8 @@ This is a plugin to create visual signals.
 * [Visual signals](#Visual-signals)
 * [Creating visual signals](#Creating-visual-signals)
   * [Creating a signal emitter](#Creating-a-signal-emitter)
+  * [Creating a signal receiver](#Creating-a-signal-receiver)
+* [Connecting signals](#Connecting-signals)
 
 ![Visual Signals 3D](/images/VisualSignals3D.png)
 

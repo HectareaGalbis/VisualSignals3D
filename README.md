@@ -89,3 +89,8 @@ The method to implement just prints the received integer.
 Finally, adjust the receiver position.
 
 ![Creating receiver 3](/images/CreatingReceiver7.png)
+
+## Connecting the signals
+
+With Visual Signals 3D, the receivers are the nodes that are connected to emitters and not viceversa. To illustrate this, let's create a new scene called `example`.
+

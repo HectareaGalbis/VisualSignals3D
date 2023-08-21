@@ -38,30 +38,54 @@ First, let's create a new scene called `Clock`. It has a sprite and a timer. Not
 
 Now, I'm adding a new Signal3DEmitterInt.
 
-![Creating emitter 1](/images/CreatingEmitter2.png)
+![Creating emitter 2](/images/CreatingEmitter2.png)
 
 I'm calling it `OnTick`.
 
-![Creating emitter 1](/images/CreatingEmitter3.png)
+![Creating emitter 3](/images/CreatingEmitter3.png)
 
 Now, we want a script on the root node to manage the timer and, later on, the signal emitter.
 
-![Creating emitter 1](/images/CreatingEmitter4.png)
+![Creating emitter 4](/images/CreatingEmitter4.png)
 
 Let's connect the timer's signal.
 
-![Creating emitter 1](/images/CreatingEmitter5.png)
+![Creating emitter 5](/images/CreatingEmitter5.png)
 
 The method we will implement should call the emitter's `emit` method.
 
-![Creating emitter 1](/images/CreatingEmitter6.png)
+![Creating emitter 6](/images/CreatingEmitter6.png)
 
 Finally we can adjust the position of our emitter.
 
-![Creating emitter 1](/images/CreatingEmitter7.png)
+![Creating emitter 7](/images/CreatingEmitter7.png)
 
 ### Creating a signal receiver
 
 The nest step is creating an object with a receiver. Let's create a new scene called `Printer`. It also has a sprite.
 
 ![Creating receiver 1](/images/CreatingReceiver1.png)
+
+Add a Signal3DReceiverInt.
+
+![Creating receiver 2](/images/CreatingReceiver2.png)
+
+I'm calling it `Print`.
+
+![Creating receiver 3](/images/CreatingReceiver3.png)
+
+We want a script to handle the receiving of signals.
+
+![Creating receiver 3](/images/CreatingReceiver4.png)
+
+Remember that receivers have a normal signal to let us know when a signal is received. Let's connect it.
+
+![Creating receiver 3](/images/CreatingReceiver5.png)
+
+The method to implement just prints the received integer.
+
+![Creating receiver 3](/images/CreatingReceiver6.png)
+
+Finally, adjust the receiver position.
+
+![Creating receiver 3](/images/CreatingReceiver7.png)

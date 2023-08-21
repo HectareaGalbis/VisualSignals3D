@@ -92,6 +92,9 @@ Finally, adjust the receiver position.
 
 ## Connecting the signals
 
-With Visual Signals 3D, the receivers are the nodes that are connected to emitters and not viceversa. To illustrate this, let's create a new scene called `example`.
+With Visual Signals 3D, the receivers are the nodes that are connected to emitters and not viceversa. To illustrate this, let's create a new scene called `example`. I've added some light and a sky, but feel free to leave it blank.
 
 ![Connecting signals 1](/images/ConnectingSignals1.png)
+
+Let's instantiate a `Clock` and a `Printer`.
+

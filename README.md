@@ -3,6 +3,7 @@
 This is a plugin to create visual signals.
 
 * [Introduction](#Introduction)
+* [Visual signals](#Visual-signals)
 
 ![Visual Signals 3D](/images/VisualSignals3D.png)
 

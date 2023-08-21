@@ -24,3 +24,10 @@ The name of the signal reveals how its signature is. If it has the suffix `<numb
 
 As you may already thinking, emitters and receivers can only be connected if they are of the same type. For example, Signal3DEmitterFloat only can be connected with Signal3DReceiverFloat.
 
+## Creating visual signals
+
+To show how to create visual signals we are going to follow the next example: We want an object that emits a signal every second with a number increasing at each tick; also, we want an object that will print every number it receives from a signal.
+
+> These objects are in this repository inside the example folder.
+
+First, let's create a new scene called Clock. It has a sprite and a timer. Nothing new for now. 

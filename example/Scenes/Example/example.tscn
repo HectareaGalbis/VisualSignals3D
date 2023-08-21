@@ -1,0 +1,54 @@
+[gd_scene load_steps=11 format=3 uid="uid://5vxyupxrqw74"]
+
+[ext_resource type="PackedScene" uid="uid://dm7qvei6hi2em" path="res://example/Scenes/Clock/clock.tscn" id="1_gsbn4"]
+[ext_resource type="PackedScene" uid="uid://cqxmcj8fey23o" path="res://example/Scenes/Printer/printer.tscn" id="2_3783a"]
+[ext_resource type="PackedScene" uid="uid://vv5fb5dipqox" path="res://example/Scenes/EvenIntFilter/even_int_filter.tscn" id="3_x0vx0"]
+[ext_resource type="Script" path="res://addons/signal_nodes/core/signal_manager.gd" id="4_yca2q"]
+[ext_resource type="PackedScene" uid="uid://dukcsadq3qwt2" path="res://example/Scenes/ColorCube/color_cube.tscn" id="5_7ki2y"]
+[ext_resource type="Texture2D" uid="uid://cqcmxmpt3rfpr" path="res://example/Icons/sky.png" id="6_h2n5i"]
+
+[sub_resource type="PlaneMesh" id="PlaneMesh_46odl"]
+
+[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_rqk8d"]
+panorama = ExtResource("6_h2n5i")
+
+[sub_resource type="Sky" id="Sky_gw2y4"]
+sky_material = SubResource("PanoramaSkyMaterial_rqk8d")
+
+[sub_resource type="Environment" id="Environment_napbx"]
+background_mode = 2
+sky = SubResource("Sky_gw2y4")
+
+[node name="Example" type="Node3D"]
+
+[node name="Clock" parent="." instance=ExtResource("1_gsbn4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47886, 0, 0)
+
+[node name="Printer" parent="." instance=ExtResource("2_3783a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4187, 0.799165, 0)
+
+[node name="EvenIntFilter" parent="." instance=ExtResource("3_x0vx0")]
+transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.946002, -0.798292, 0)
+
+[node name="_SignalManager(not touch)" type="Node" parent="."]
+script = ExtResource("4_yca2q")
+signal_dict = {
+"../Clock/OnTick": [&"../Printer/PrintNumber", &"../EvenIntFilter/IsEven"],
+"../EvenIntFilter/OnEven": [&"../ColorCube/ChangeColor"]
+}
+
+[node name="ColorCube" parent="." instance=ExtResource("5_7ki2y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44225, -0.0887687, 0)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(-0.964971, 0, 0.262358, 0, 1, 0, -0.262358, 0, -0.964971, 1, 0, -4.14951)
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(0.695549, -0.3086, 0.648828, 0, 0.903058, 0.429518, -0.718478, -0.298751, 0.628121, 0, 3, 0)
+
+[node name="MeshInstance3D" type="MeshInstance3D" parent="."]
+transform = Transform3D(4.725, 0, 0, 0, 4.725, 0, 0, 0, 4.725, 0, -1.648, 0)
+mesh = SubResource("PlaneMesh_46odl")
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_napbx")

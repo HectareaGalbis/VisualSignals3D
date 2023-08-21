@@ -1,0 +1,19 @@
+[gd_scene load_steps=4 format=3 uid="uid://cqxmcj8fey23o"]
+
+[ext_resource type="Script" path="res://example/Scenes/Printer/printer.gd" id="1_7ljhs"]
+[ext_resource type="Script" path="res://addons/signal_nodes/signals/signal_receiver_int.gd" id="1_hgwj3"]
+[ext_resource type="Texture2D" uid="uid://1nnhjiqwj38u" path="res://example/Icons/brush.png" id="2_8u66c"]
+
+[node name="Printer" type="Node3D"]
+script = ExtResource("1_7ljhs")
+
+[node name="PrintNumber" type="Node3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.567426, 0)
+script = ExtResource("1_hgwj3")
+
+[node name="Sprite3D" type="Sprite3D" parent="."]
+transform = Transform3D(0.1, 0, 0, 0, 0.1, 0, 0, 0, 0.1, 0, 0, 0)
+billboard = 1
+texture = ExtResource("2_8u66c")
+
+[connection signal="receive_signal" from="PrintNumber" to="." method="_on_signal_receiver_int_receive_signal"]

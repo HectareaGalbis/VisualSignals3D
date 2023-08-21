@@ -31,3 +31,5 @@ To show how to create visual signals we are going to follow the next example: We
 > These objects are in this repository inside the example folder.
 
 First, let's create a new scene called Clock. It has a sprite and a timer. Nothing new for now. 
+
+![Creating emitter 1](/images/CreatingEmitter1.png)

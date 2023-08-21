@@ -19,3 +19,8 @@ When talking about signals, there are two sides: The emitter and the receiver. T
 A signal has a signature. It can receiver a specified number of arguments. That's why we can have several types of emitters and receivers. Here are a list with all the signals that come with this plugin:
 
 ![Visual Signals 3D nodes](/images/VisualSignal3DNodes.png)
+
+The name of the signal reveals how its signature is. If it has the suffix `<number>Param`, then the signal has the number of params it sais. For example, Signal3DEmitterTwoParam has 2 parameters. These parameters can be of any type. However, we have signals like Signal3DEmitterBool that has only one parameter of type `bool`. 
+
+As you may already thinking, emitters and receivers can only be connected if they are of the same type. For example, Signal3DEmitterFloat only can be connected with Signal3DReceiverFloat.
+

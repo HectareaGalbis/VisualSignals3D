@@ -21,25 +21,6 @@ sky = SubResource("Sky_gw2y4")
 
 [node name="Example" type="Node3D"]
 
-[node name="Clock" parent="." instance=ExtResource("1_gsbn4")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.47886, 0, 0)
-
-[node name="Printer" parent="." instance=ExtResource("2_3783a")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4187, 0.799165, 0)
-
-[node name="EvenIntFilter" parent="." instance=ExtResource("3_x0vx0")]
-transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.946002, -0.798292, 0)
-
-[node name="_SignalManager(not touch)" type="Node" parent="."]
-script = ExtResource("4_87tft")
-signal_dict = {
-"../Clock/OnTick": [&"../EvenIntFilter/IsEven", &"../Printer/Print"],
-"../EvenIntFilter/OnEven": [&"../ColorCube/ChangeColor"]
-}
-
-[node name="ColorCube" parent="." instance=ExtResource("5_7ki2y")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -2.44225, -0.0887687, 0)
-
 [node name="Camera3D" type="Camera3D" parent="."]
 transform = Transform3D(-0.964971, 0, 0.262358, 0, 1, 0, -0.262358, 0, -0.964971, 1, 0, -4.14951)
 
@@ -52,3 +33,22 @@ mesh = SubResource("PlaneMesh_46odl")
 
 [node name="WorldEnvironment" type="WorldEnvironment" parent="."]
 environment = SubResource("Environment_napbx")
+
+[node name="Clock" parent="." instance=ExtResource("1_gsbn4")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1.49938, 0, 0)
+
+[node name="Printer" parent="." instance=ExtResource("2_3783a")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.119539, 0.724844, 0)
+
+[node name="_Signal3DManager(not touch)" type="Node" parent="."]
+script = ExtResource("4_87tft")
+signal_dict = {
+"../Clock/OnTick": [&"../Printer/Print", &"../EvenIntFilter/IsEven"],
+"../EvenIntFilter/OnEven": [&"../ColorCube/ChangeColor"]
+}
+
+[node name="EvenIntFilter" parent="." instance=ExtResource("3_x0vx0")]
+transform = Transform3D(-0.999997, 0, -0.00240865, 0, 1, 0, 0.00240865, 0, -0.999997, 0, -0.899692, 0)
+
+[node name="ColorCube" parent="." instance=ExtResource("5_7ki2y")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -1.57428, -0.284884, 0)

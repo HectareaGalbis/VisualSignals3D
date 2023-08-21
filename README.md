@@ -100,8 +100,11 @@ Let's instantiate a `Clock` and a `Printer`. You will notice that a new node cal
 
 ![Connecting signals 2](/images/ConnectingSignals2.png)
 
-When selecting an object that contains one or more receivers, it will have extra properties at top of the inspector.
+When selecting an object that contains one or more receivers, it will have extra properties at top of the inspector. A new property is created for each receiver the object contains.
 
 ![Connecting signals 3](/images/ConnectingSignals3.png)
 
+Clicking on the dropdown will show all the emitters that can be connected to that receiver. Also, a visual line will be drawn to tell us what emitter we are going to connect to.
+
+![Connecting signals 3](/images/ConnectingSignals4.png)
 

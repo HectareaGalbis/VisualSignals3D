@@ -30,6 +30,8 @@ To show how to create visual signals we are going to follow the next example: We
 
 > These objects are in this repository inside the example folder.
 
+### Creating a signal emitter
+
 First, let's create a new scene called Clock. It has a sprite and a timer. Nothing new for now. 
 
 ![Creating emitter 1](/images/CreatingEmitter1.png)
@@ -57,3 +59,6 @@ The method we will implement should call the emitter's `emit` method.
 Finally we can adjust the position of our emitter.
 
 ![Creating emitter 1](/images/CreatingEmitter7.png)
+
+### Creating a signal receiver
+

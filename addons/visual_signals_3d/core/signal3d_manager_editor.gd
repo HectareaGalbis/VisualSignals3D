@@ -5,7 +5,7 @@ var option_button = OptionButton.new()
 
 var emitter_node_dictionary : Dictionary = {}
 var emitter_nodes : Array = []
-var signal_receiver : SignalReceiverBase = null
+var signal_receiver : Signal3DReceiverBase = null
 var popup_opened : bool = false
 
 
@@ -21,7 +21,7 @@ func _init(_signal_receiver):
 	_select_right_option()
 
 func _process(delta):
-	var manager = SignalNodesHelper.get_signal_manager(signal_receiver)
+	var manager = Signal3DUtils.get_signal_manager(signal_receiver)
 	if manager:
 		if option_button.get_popup().visible:
 			var focused_item_index = option_button.get_popup().get_focused_item()
@@ -65,9 +65,9 @@ func _populate_option_button():
 			option_button.add_item(emitter_node_arr[1].get_name(),emitter_node_arr[0])
 
 func _on_item_selected(index):
-	if !SignalNodesHelper.is_this_my_scene(signal_receiver.owner):
+	if !Signal3DUtils.is_this_my_scene(signal_receiver.owner):
 		return
-	var manager = SignalNodesHelper.ensure_signal_manager(signal_receiver)
+	var manager = Signal3DUtils.ensure_signal_manager(signal_receiver)
 	if manager:
 		var signal_emitter = manager.find_signal_emitter(signal_receiver)
 		if signal_emitter:
@@ -78,9 +78,9 @@ func _on_item_selected(index):
 			manager.add_or_update_link(signal_emitter,signal_receiver)
 
 func _select_right_option():
-	if !SignalNodesHelper.is_this_my_scene(signal_receiver.owner):
+	if !Signal3DUtils.is_this_my_scene(signal_receiver.owner):
 		return
-	var manager = SignalNodesHelper.ensure_signal_manager(signal_receiver)
+	var manager = Signal3DUtils.ensure_signal_manager(signal_receiver)
 	if manager:
 		var new_value = manager.find_signal_emitter(signal_receiver)
 		if !new_value:

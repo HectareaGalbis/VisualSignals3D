@@ -1,7 +1,7 @@
 @tool
 extends Node
 
-class_name SignalManager
+class_name Signal3DManager
 
 @export var signal_dict : Dictionary
 
@@ -72,12 +72,12 @@ func set_draw_preview_line(draw_preview : bool, emitter_node : Node3D, receiver_
 
 func _update_lines():
 	if not lines:
-		lines = SignalNodesHelper.create_line_node()
-		white_material = SignalNodesHelper.create_color_material(Color.WHITE)
-		red_material = SignalNodesHelper.create_color_material(Color.RED)
-		green_material = SignalNodesHelper.create_color_material(Color.GREEN)
+		lines = Signal3DUtils.create_line_node()
+		white_material = Signal3DUtils.create_color_material(Color.WHITE)
+		red_material = Signal3DUtils.create_color_material(Color.RED)
+		green_material = Signal3DUtils.create_color_material(Color.GREEN)
 		add_child(lines)
-	if SignalNodesHelper.is_this_my_scene(self):
+	if Signal3DUtils.is_this_my_scene(self):
 		_remove_invalid_nodes()
 	_update_position_of_lines()
 

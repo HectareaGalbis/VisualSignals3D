@@ -1,7 +1,7 @@
 [gd_scene load_steps=5 format=3 uid="uid://dukcsadq3qwt2"]
 
 [ext_resource type="Script" path="res://example/Scenes/ColorCube/color_cube.gd" id="1_3i0jb"]
-[ext_resource type="Script" path="res://addons/signal_nodes/signals/signal_receiver_bool.gd" id="2_6glf0"]
+[ext_resource type="Script" path="res://addons/visual_signals_3d/signals/signal3d_receiver_bool.gd" id="2_xc2ql"]
 
 [sub_resource type="ORMMaterial3D" id="ORMMaterial3D_ox3ri"]
 albedo_color = Color(1, 0, 0, 1)
@@ -17,6 +17,6 @@ mesh = SubResource("BoxMesh_eq25s")
 
 [node name="ChangeColor" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0, 0.903488, 0)
-script = ExtResource("2_6glf0")
+script = ExtResource("2_xc2ql")
 
 [connection signal="receive_signal" from="ChangeColor" to="." method="_on_change_color_receive_signal"]

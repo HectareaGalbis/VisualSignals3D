@@ -3,7 +3,7 @@
 [ext_resource type="PackedScene" uid="uid://dm7qvei6hi2em" path="res://example/Scenes/Clock/clock.tscn" id="1_gsbn4"]
 [ext_resource type="PackedScene" uid="uid://cqxmcj8fey23o" path="res://example/Scenes/Printer/printer.tscn" id="2_3783a"]
 [ext_resource type="PackedScene" uid="uid://vv5fb5dipqox" path="res://example/Scenes/EvenIntFilter/even_int_filter.tscn" id="3_x0vx0"]
-[ext_resource type="Script" path="res://addons/signal_nodes/core/signal_manager.gd" id="4_yca2q"]
+[ext_resource type="Script" path="res://addons/visual_signals_3d/core/signal3d_manager.gd" id="4_87tft"]
 [ext_resource type="PackedScene" uid="uid://dukcsadq3qwt2" path="res://example/Scenes/ColorCube/color_cube.tscn" id="5_7ki2y"]
 [ext_resource type="Texture2D" uid="uid://cqcmxmpt3rfpr" path="res://example/Icons/sky.png" id="6_h2n5i"]
 
@@ -31,7 +31,7 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.4187, 0.799165, 0)
 transform = Transform3D(-1, 0, -8.74228e-08, 0, 1, 0, 8.74228e-08, 0, -1, -0.946002, -0.798292, 0)
 
 [node name="_SignalManager(not touch)" type="Node" parent="."]
-script = ExtResource("4_yca2q")
+script = ExtResource("4_87tft")
 signal_dict = {
 "../Clock/OnTick": [&"../Printer/PrintNumber", &"../EvenIntFilter/IsEven"],
 "../EvenIntFilter/OnEven": [&"../ColorCube/ChangeColor"]

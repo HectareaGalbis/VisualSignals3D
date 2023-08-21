@@ -17,4 +17,4 @@ config/icon="res://icon.svg"
 
 [editor_plugins]
 
-enabled=PackedStringArray("res://addons/signal_nodes/plugin.cfg")
+enabled=PackedStringArray("res://addons/visual_signals_3d/plugin.cfg")

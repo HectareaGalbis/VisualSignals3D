@@ -3,15 +3,15 @@
 importer="texture"
 type="CompressedTexture2D"
 uid="uid://cmkh7h1hbuipi"
-path="res://.godot/imported/signal_receiver.svg-9a25ca10d55104bdd79f670bc0f65cb7.ctex"
+path="res://.godot/imported/signal3d_receiver.svg-b58ef56d69679ed856043b52d67b97e9.ctex"
 metadata={
 "vram_texture": false
 }
 
 [deps]
 
-source_file="res://addons/signal_nodes/icons/signal_receiver.svg"
-dest_files=["res://.godot/imported/signal_receiver.svg-9a25ca10d55104bdd79f670bc0f65cb7.ctex"]
+source_file="res://addons/visual_signals_3d/icons/signal3d_receiver.svg"
+dest_files=["res://.godot/imported/signal3d_receiver.svg-b58ef56d69679ed856043b52d67b97e9.ctex"]
 
 [params]
 

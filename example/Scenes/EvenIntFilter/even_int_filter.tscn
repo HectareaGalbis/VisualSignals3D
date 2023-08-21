@@ -1,16 +1,16 @@
 [gd_scene load_steps=5 format=3 uid="uid://vv5fb5dipqox"]
 
 [ext_resource type="Script" path="res://example/Scenes/EvenIntFilter/even_int_filter.gd" id="1_3pmeg"]
-[ext_resource type="Script" path="res://addons/signal_nodes/signals/signal_receiver_int.gd" id="1_fppe0"]
+[ext_resource type="Script" path="res://addons/visual_signals_3d/signals/signal3d_receiver_int.gd" id="2_6kvu8"]
 [ext_resource type="Texture2D" uid="uid://bb7cqn4dwo3lo" path="res://example/Icons/filter.png" id="2_b58sk"]
-[ext_resource type="Script" path="res://addons/signal_nodes/signals/signal_emitter_bool.gd" id="3_2y3yb"]
+[ext_resource type="Script" path="res://addons/visual_signals_3d/signals/signal3d_emitter_bool.gd" id="4_nwuau"]
 
 [node name="EvenIntFilter" type="Node3D"]
 script = ExtResource("1_3pmeg")
 
 [node name="IsEven" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.251971, 0.609667, 0)
-script = ExtResource("1_fppe0")
+script = ExtResource("2_6kvu8")
 
 [node name="Sprite3D" type="Sprite3D" parent="."]
 transform = Transform3D(0.5, 0, 0, 0, 0.5, 0, 0, 0, 0.5, 0, 0, 0)
@@ -19,6 +19,6 @@ texture = ExtResource("2_b58sk")
 
 [node name="OnEven" type="Node3D" parent="."]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 0.217715, 0.593251, 0)
-script = ExtResource("3_2y3yb")
+script = ExtResource("4_nwuau")
 
 [connection signal="receive_signal" from="IsEven" to="." method="_on_signal_receiver_int_receive_signal"]

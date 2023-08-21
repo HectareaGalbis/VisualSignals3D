@@ -1,6 +1,6 @@
 extends Node
 
-class_name SignalNodesHelper
+class_name Signal3DUtils
 
 static func is_this_my_scene(node : Node) -> bool:
 	if node:
@@ -9,27 +9,27 @@ static func is_this_my_scene(node : Node) -> bool:
 	return false
 
 
-static func ensure_signal_manager(node : Node) -> SignalManager:
+static func ensure_signal_manager(node : Node) -> Signal3DManager:
 	var root_node = node.get_tree().edited_scene_root
 	var children_list = root_node.get_children(true)
 	var manager = null
 	for child in children_list:
-		if child is SignalManager:
+		if child is Signal3DManager:
 			manager = child
 	if not manager:
-		manager = SignalManager.new()
-		manager.name = "_SignalManager(not touch)"
+		manager = Signal3DManager.new()
+		manager.name = "_Signal3DManager(not touch)"
 		root_node.add_child(manager)
 		manager.set_owner(root_node)
 	return manager
 
 
-static func get_signal_manager(node : Node) -> SignalManager:
+static func get_signal_manager(node : Node) -> Signal3DManager:
 	var root_node = node.get_tree().edited_scene_root
 	var children_list = root_node.get_children(true)
 	var manager = null
 	for child in children_list:
-		if child is SignalManager:
+		if child is Signal3DManager:
 			manager = child
 	return manager
 

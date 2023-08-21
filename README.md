@@ -33,3 +33,27 @@ To show how to create visual signals we are going to follow the next example: We
 First, let's create a new scene called Clock. It has a sprite and a timer. Nothing new for now. 
 
 ![Creating emitter 1](/images/CreatingEmitter1.png)
+
+Now, I'm adding a new Signal3DEmitterInt.
+
+![Creating emitter 1](/images/CreatingEmitter2.png)
+
+I'm calling it `OnTick`.
+
+![Creating emitter 1](/images/CreatingEmitter3.png)
+
+Now, we want a script on the root node to manage the timer and, later on, the signal emitter.
+
+![Creating emitter 1](/images/CreatingEmitter4.png)
+
+Let's connect the timer's signal.
+
+![Creating emitter 1](/images/CreatingEmitter5.png)
+
+The method we will implement should call the emitter's `emit` method.
+
+![Creating emitter 1](/images/CreatingEmitter6.png)
+
+Finally we can adjust the position of our emitter.
+
+![Creating emitter 1](/images/CreatingEmitter7.png)

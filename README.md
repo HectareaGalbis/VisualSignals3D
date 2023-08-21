@@ -76,21 +76,22 @@ I'm calling it `Print`.
 
 We want a script to handle the receiving of signals.
 
-![Creating receiver 3](/images/CreatingReceiver4.png)
+![Creating receiver 4](/images/CreatingReceiver4.png)
 
 Remember that receivers have a normal signal to let us know when a signal is received. Let's connect it.
 
-![Creating receiver 3](/images/CreatingReceiver5.png)
+![Creating receiver 5](/images/CreatingReceiver5.png)
 
 The method to implement just prints the received integer.
 
-![Creating receiver 3](/images/CreatingReceiver6.png)
+![Creating receiver 6](/images/CreatingReceiver6.png)
 
 Finally, adjust the receiver position.
 
-![Creating receiver 3](/images/CreatingReceiver7.png)
+![Creating receiver 7](/images/CreatingReceiver7.png)
 
 ## Connecting the signals
 
 With Visual Signals 3D, the receivers are the nodes that are connected to emitters and not viceversa. To illustrate this, let's create a new scene called `example`.
 
+![Connecting signals 1](/images/ConnectingSignals1.png)

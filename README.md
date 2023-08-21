@@ -106,5 +106,8 @@ When selecting an object that contains one or more receivers, it will have extra
 
 Clicking on the dropdown will show all the emitters that can be connected to that receiver. Also, a visual line will be drawn to tell us what emitter we are going to connect to.
 
-![Connecting signals 3](/images/ConnectingSignals4.png)
+![Connecting signals 4](/images/ConnectingSignals4.png)
 
+Once you select an emitter the connection will be drawn as a white line.
+
+![Connecting signals 5](/images/ConnectingSignals5.png)

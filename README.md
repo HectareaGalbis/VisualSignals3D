@@ -32,7 +32,7 @@ To show how to create visual signals we are going to follow the next example: We
 
 ### Creating a signal emitter
 
-First, let's create a new scene called Clock. It has a sprite and a timer. Nothing new for now. 
+First, let's create a new scene called `Clock`. It has a sprite and a timer. Nothing new for now. 
 
 ![Creating emitter 1](/images/CreatingEmitter1.png)
 
@@ -62,3 +62,6 @@ Finally we can adjust the position of our emitter.
 
 ### Creating a signal receiver
 
+The nest step is creating an object with a receiver. Let's create a new scene called `Printer`. It also has a sprite.
+
+![Creating receiver 1](/images/CreatingReceiver1.png)
